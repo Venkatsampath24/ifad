@@ -1,0 +1,31 @@
+/* src/components/StarryBackground.css */
+.star-container {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Keep behind other content */
+    background-color: black; /* Set background to black for visibility */
+  }
+  
+  .star {
+    position: absolute;
+    background-color: white; /* Star color */
+    border-radius: 50%;
+    opacity: 0.8; /* Semi-transparent stars */
+    animation: twinkle ease-in-out infinite;
+    width: 3px; /* Adjust star size */
+    height: 3px; /* Adjust star size */
+  }
+  
+  @keyframes twinkle {
+    0%, 20%, 100% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(1.5);
+    }
+  }
+  

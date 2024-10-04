@@ -1,38 +1,38 @@
+/* src/App.css */
+body {
+  margin: 0; /* Remove default body margin */
+  overflow: hidden; /* Prevent scrolling */
+  background-color: black; /* Set body background to black */
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative; /* Relative positioning for inner elements */
+  height: 100vh; /* Full height for the app */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: white; /* Change text color for visibility */
+  z-index: 1; /* Ensure it stays above the background */
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  padding: 15px 30px; /* Increased padding for a larger button */
+  font-size: 20px; /* Increased font size for better visibility */
+  color: white; /* Button text color */
+  background-color: #007BFF; /* Button background color */
+  border: none; /* No border */
+  border-radius: 25px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  z-index: 2; /* Ensure button is above the background */
+  transition: background-color 0.3s, transform 0.3s; /* Transition effects for hover */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Shadow for depth */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button:hover {
+  background-color: #0056b3; /* Darken on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  transform: translateY(1px); /* Slightly lower on click */
 }
